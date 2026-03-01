@@ -1,16 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Math Hub - Games</title>
   <style>
-    body { background:#ffffff; font-family:Arial; color:#003366; padding:20px; }
-    h1 { text-align:center; color:#0066cc; }
-    #searchBox { width:80%; padding:10px; margin:20px auto; display:block; border:2px solid #0066cc; border-radius:5px; }
-    li { margin:15px 0; padding:10px; border:1px solid #0066cc; border-radius:5px; background:#f0f8ff; }
-    a { font-weight:bold; color:#003366; text-decoration:none; }
-    a:hover { color:#0066cc; text-decoration</style>
+    body {
+      background: linear-gradient(to bottom right, #ffffff, #f0f8ff);
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #003366;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0066cc;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p.intro {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #004080;
+    }
+
+    #searchBox {
+      width: 80%;
+      padding: 12px;
+      margin: 0 auto 30px auto;
+      display: block;
+      border: 2px solid #0066cc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .game-card {
+      margin: 20px auto;
+      max-width: 700px;
+      border: 2px solid #0066cc;
+      border-radius: 10px;
+      background-color: #eef6ff;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.02);
+      background-color: #e0f0ff;
+    }
+
+    .game-card h2 {
+      margin: 0;
+      color: #003366;
+    }
+
+    .game-card p {
+      margin: 10px 0;
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    .game-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .game-card a:hover {
+      background-color: #004c99;
+    }
+
+    /* Unique Game Styles */
+    #uniqueGame {
+      margin: 40px auto;
+      max-width: 700px;
+      border: 2px solid #0066cc;
+      border-radius: 10px;
+      background-color: #f9f9ff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #uniqueGame h2 {
+      color: #0066cc;
+    }
+
+    #question {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
+    #answer {
+      padding: 10px;
+      border: 1px solid #0066cc;
+      border-radius: 5px;
+      width: 100px;
+      text-align: center;
+    }
+
+    #submitBtn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #submitBtn:hover {
+      background-color: #004c99;
+    }
+
+    #feedback {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <h1>Math Games</h1>
+  <p class="intro">Explore fun math games from trusted websites, and try our unique Math Quiz game below!</p>
+
   <input type="text" id="searchBox" placeholder="Search for a math game...">
-  <ul id="gameList
+
+  <div id="gameList">
+    <div class="game-card">
+      <h2>MathGames.com</h2>
+      <p>Free online math games, worksheets, and quizzes for all grade levels.</p>
+      <a href="https://www.mathgames.com/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Cool Math Games</h2>
+      <p>Logic and puzzle games designed to make you think and have fun.</p>
+      <a href="https://www.coolmathgames.com/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Poki Math Games</h2>
+      <p>Free browser-based math games covering arithmetic, geometry, and more.</p>
+      <a href="https://poki.com/en/math" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Math Playground</h2>
+      <p>Interactive math games and activities for elementary and middle school students.</p>
+      <a href="https://www.mathplayground.com/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Prodigy Math</h2>
+      <p>Adventure-style math practice that adapts to each learner’s skill level.</p>
+      <a href="https://www.prodigygame.com/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>SplashLearn Math Games</h2>
+      <p>Fun math games for kids covering addition, subtraction, fractions, and more.</p>
+      <a href="https://www.splashlearn.com/math-games" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Arcademics</h2>
+      <p>Multiplayer math games where students can compete while practicing skills.</p>
+      <a href="https://www.arcademics.com/games" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>BrainPOP Math Games</h2>
+      <p>Educational math games tied to animated lessons.</p>
+      <a href="https://www.brainpop.com/games/math/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Education.com Math Games</h2>
+      <p>Games organized by grade level and topic.</p>
+      <a href="https://www.education.com/games/math/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Kids Math Games Online</h2>
+      <p>Simple math games for younger learners to build confidence in numbers.</p>
+      <a href="https://www.kidsmathgamesonline.com/" target="_blank">Play Now</a>
+    </div>
+  </div>
+
+  <!-- Unique Game -->
+  <div id="uniqueGame">
+    <h2>Math Hub Quiz Game</h2>
+    <p id="question">Loading question...</p>
+    <input type="number" id="answer" placeholder="Your answer">
+    <br>
+    <button id="submitBtn">Submit</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    // Search filter for games
+    document.getElementById('searchBox').addEventListener('keyup', function() {
+      let filter = this.value.toLowerCase();
+      let games = document.querySelectorAll('#gameList .game-card');
+
+      games.forEach(function(item) {
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+
+    // Unique Math Quiz Game
+    const questions = [
+      {q: "What is 12 × 8?", a: 96},
+      {q: "Solve: 15 + 27", a: 42},
+      {q: "What is the square root of 81?", a: 9},
+      {q: "Solve: 100 ÷ 4", a: 25},
+      {q: "What is 7²?", a: 49}
+    ];
+
+    let current = 0;
+    const questionEl = document.getElementById('question');
+    const answerEl = document.getElementById('answer');
+    const feedbackEl = document.getElementById('feedback');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function loadQuestion() {
+      questionEl.textContent = questions[current].q;
+      answerEl.value = "";
+      feedbackEl.textContent = "";
+    }
+
+    submitBtn.addEventListener('click', function() {
+      let userAnswer = parseInt(answerEl.value);
+      if (userAnswer === questions[current].a) {
+        feedbackEl.textContent = "✅ Correct!";
+        feedbackEl.style.color = "green";
+      } else {
+        feedbackEl.textContent = "❌ Incorrect. Try again!";
+        feedbackEl.style.color = "red";
+        return;
+      }
+      current = (current + 1) % questions.length;
+      setTimeout(loadQuestion, 1500);
+    });
+
+    loadQuestion();
+  </script>
+</body
