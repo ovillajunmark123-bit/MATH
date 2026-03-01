@@ -1,36 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Math Hub</title>
   <style>
     body {
-      background-color: #f0f8ff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: #003366;
       margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #e6f2ff, #ffffff);
+      color: #003366;
     }
+
     header {
       background-color: #003366;
       color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .symbols {
+      font-size: 2em;
+      margin-top: 10px;
+      color: #66b2ff;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
       padding: 20px;
     }
-    h1 { font-size: 3em; margin: 0; }
-    p { font-size: 1.2em; margin: 20px; }
-    .symbols { font-size: 2em; color: #0066cc; margin: 20px; }
-    button {
-      background-color: #0066cc; color: white; border: none;
-      padding: 10px 20px; font-size: 1em; cursor: pointer;
-      margin-top: 20px; border-radius: 5px;
+
+    .content p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
-    button:hover { background-color: #004c99; }
+
+    .btn-next {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    .btn-next:hover {
+      background-color: #004c99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-  <header><h1>Math Hub</h1></header>
-  <div class="symbols">+ &nbsp; − &nbsp; × &nbsp; ÷</div>
-  <p>Welcome to <strong>Math Hub</strong>! Discover the joy of learning math through resources, videos, tools, and games. Math is more than numbers—it’s a way of thinking, solving, and exploring the world. Join us and enjoy the adventure of learning!</p>
-  <button onclick="window.location.href='secondpage.html'">Next</button>
+  <header>
+    <h1>Math Hub</h1>
+    <div class="symbols">+ &nbsp; − &nbsp; × &nbsp; ÷ &nbsp; √ &nbsp; ∑ &nbsp; π</div>
+  </header>
+
+  <div class="content">
+    <p>
+      Welcome to <strong>Math Hub</strong> — your gateway to mastering mathematics.  
+      Explore resources, videos, tools, and games designed to make math engaging,  
+      practical, and inspiring. Whether you’re solving equations or discovering  
+      new concepts, Math Hub is here to guide your journey with clarity and confidence.
+    </p>
+    <button class="btn-next" onclick="window.location.href='secondpage.html'">Explore Resources →</button>
+  </div>
+
+  <footer>
+    © 2026 Math Hub | Empowering learners through mathematics
+  </footer>
 </body>
-</html>
+  </html>
