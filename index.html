@@ -1,92 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Math Hub</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(to bottom right, #e6f2ff, #ffffff);
-      color: #003366;
-      line-height: 1.8;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Hub | Master Mathematics</title>
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: 
+                radial-gradient(circle at top left, #234177 0%, transparent 40%),
+                radial-gradient(circle at top right, #1f3767 0%, transparent 40%),
+                linear-gradient(135deg, #101934 0%, #060914 100%);
+        }
 
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
+        /* Background pattern */
+        .page-content {
+            flex-grow: 1;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.035" font-family="Cambria, Georgia, Times, serif" font-size="8"%3E%3Ctext x="10" y="20"%3Ef(s) dx %3D ∫%3C/text%3E%3Ctext x="40" y="30"%3Ex² - y%3C/text%3E%3Ctext x="70" y="15"%3E∑(i=0)^n%3C/text%3E%3Ctext x="5" y="45"%3Ea² + b² = c²%3C/text%3E%3Ctext x="80" y="40"%3E∂u/∂t%3C/text%3E%3Ctext x="25" y="60"%3Ee = mc²%3C/text%3E%3Ctext x="65" y="70"%3E√(1+x²)%3C/text%3E%3Ctext x="10" y="85"%3Eln(x)%3C/text%3E%3Ctext x="50" y="90"%3Ee^{iπ} + 1 = 0%3C/text%3E%3Ctext x="85" y="85"%3E∇ · E%3C/text%3E%3C/g%3E%3C/svg%3E');
+            background-repeat: repeat;
+        }
 
-    header h1 {
-      font-size: 4em; /* Bigger title */
-      margin: 0;
-      letter-spacing: 2px;
-    }
+        /* Header */
+        header {
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 4.5em; /* Bigger title */
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .symbol-bar {
+            font-size: 2.5em; /* Larger math symbols */
+            color: #6da2f1;
+            letter-spacing: 12px;
+            opacity: 0.85;
+        }
 
-    .symbols {
-      font-size: 2.5em; /* Larger math symbols */
-      margin-top: 15px;
-      color: #66b2ff;
-    }
+        /* Glass card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.6em; /* Larger paragraph text */
+            color: #d1d5db;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
 
-    .content {
-      max-width: 900px;
-      margin: 60px auto;
-      text-align: center;
-      padding: 20px;
-    }
+        /* Button */
+        .button {
+            display: inline-block;
+            background: transparent;
+            color: #ffffff;
+            font-size: 1.4em; /* Larger button text */
+            font-weight: 500;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 0 20px rgba(27, 107, 237, 0.6), inset 0 0 15px rgba(27, 107, 237, 0.4);
+            background-color: rgba(27, 107, 237, 0.15);
+        }
+        .button:hover {
+            box-shadow: 0 0 35px rgba(27, 107, 237, 1), inset 0 0 20px rgba(27, 107, 237, 0.6);
+            background-color: rgba(27, 107, 237, 0.25);
+            transform: translateY(-3px);
+        }
 
-    .content p {
-      font-size: 1.5em; /* Larger paragraph text */
-      line-height: 1.8;
-      margin-bottom: 40px;
-    }
-
-    .btn-next {
-      background-color: #0066cc;
-      color: white;
-      border: none;
-      padding: 15px 40px;
-      font-size: 1.3em; /* Bigger button text */
-      cursor: pointer;
-      border-radius: 30px;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    }
-
-    .btn-next:hover {
-      background-color: #004c99;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 1.1em; /* Larger footer text */
-      color: #666;
-    }
-  </style>
+        /* Footer */
+        footer {
+            padding: 25px 0;
+            text-align: center;
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 300;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Math Hub</h1>
-    <div class="symbols">+ &nbsp; − &nbsp; × &nbsp; ÷ &nbsp; √ &nbsp; ∑ &nbsp; π</div>
-  </header>
 
-  <div class="content">
-    <p>
-      Welcome to <strong>Math Hub</strong> — your gateway to mastering mathematics.  
-      Explore resources, videos, tools, and games designed to make math engaging,  
-      practical, and inspiring. Whether you’re solving equations or discovering  
-      new concepts, Math Hub is here to guide your journey with clarity and confidence.
-    </p>
-    <button class="btn-next" onclick="window.location.href='secondpage.html'">Explore Resources →</button>
-  </div>
+    <div class="page-content">
+        <header>
+            <h1>Math Hub</h1>
+            <div class="symbol-bar">
+                + − × ÷ √ ∑ π
+            </div>
+        </header>
 
-  <footer>
-    © 2026 Math Hub | Empowering learners through mathematics
-  </footer>
+        <main class="glass-card">
+            <p>
+                Welcome to <strong>Math Hub</strong> — your gateway to mastering mathematics. 
+                Explore resources, videos, tools, and games designed to make math engaging, 
+                practical, and inspiring. Whether you’re solving equations or discovering 
+                new concepts, <strong>Math Hub</strong> is here to guide your journey with clarity and confidence.
+            </p>
+            <a href="secondpage.html" class="button">Explore Resources →</a>
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Math Hub | Empowering learners through mathematics
+    </footer>
+
 </body>
 </html>
