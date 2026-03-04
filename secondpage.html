@@ -4,94 +4,91 @@
   <meta charset="UTF-8">
   <title>Math Hub - Resources</title>
   <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
     body {
-      background: linear-gradient(to bottom right, #f0f8ff, #ffffff);
       font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f0f8ff, #ffffff);
       color: #003366;
-      margin: 0;
+      line-height: 1.8;
+      font-size: 22px;
       padding: 20px;
     }
-
     h1 {
-      text-align: center;
-      color: #0066cc;
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      text-align:center;
+      font-size:3.5em;
+      color:#0066cc;
+      margin-bottom:20px;
     }
-
     p.intro {
-      text-align: center;
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      color: #004080;
+      text-align:center;
+      font-size:1.6em;
+      margin-bottom:40px;
+      color:#004080;
+      max-width:900px;
+      margin-left:auto;
+      margin-right:auto;
     }
-
     #searchBox {
-      width: 80%;
-      padding: 12px;
-      margin: 0 auto 30px auto;
-      display: block;
-      border: 2px solid #0066cc;
-      border-radius: 8px;
-      font-size: 1em;
+      width:80%;
+      padding:15px;
+      margin:0 auto 40px auto;
+      display:block;
+      border:2px solid #0066cc;
+      border-radius:8px;
+      font-size:1.2em;
     }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      max-width: 900px;
-      margin: 0 auto;
+    .category {margin:50px auto; max-width:1100px;}
+    .category h2 {
+      text-align:center;
+      font-size:2.5em;
+      color:#004080;
+      margin-bottom:30px;
+      border-bottom:2px solid #0066cc;
+      display:inline-block;
+      padding-bottom:5px;
     }
-
-    li {
-      margin: 15px 0;
-      padding: 15px;
-      border: 1px solid #0066cc;
-      border-radius: 8px;
-      background-color: #eef6ff;
-      transition: transform 0.2s ease;
+    .card-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
     }
-
-    li:hover {
-      transform: scale(1.02);
-      background-color: #e0f0ff;
+    .card {
+      background-color:#eef6ff;
+      border:2px solid #0066cc;
+      border-radius:12px;
+      padding:25px;
+      text-align:center;
+      transition:transform 0.2s ease;
+      font-size:1.2em;
     }
-
-    a {
-      font-weight: bold;
-      color: #003366;
-      text-decoration: none;
-      font-size: 1.1em;
+    .card:hover {transform:scale(1.05); background-color:#e0f0ff;}
+    .card h3 {font-size:1.4em; margin-bottom:10px; color:#003366;}
+    .card p {font-size:1.1em; color:#333; margin-bottom:15px;}
+    .card a {
+      display:inline-block;
+      padding:10px 20px;
+      background-color:#0066cc;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:1.1em;
+      transition:background-color 0.3s ease;
     }
-
-    a:hover {
-      color: #0066cc;
-      text-decoration: underline;
-    }
-
-    li p {
-      margin: 8px 0 0 0;
-      font-size: 0.95em;
-      color: #333;
-    }
-
+    .card a:hover {background-color:#004c99;}
     button {
-      background-color: #0066cc;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      font-size: 1.1em;
-      cursor: pointer;
-      margin: 40px auto;
-      display: block;
-      border-radius: 30px;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      background-color:#0066cc;
+      color:white;
+      border:none;
+      padding:15px 40px;
+      font-size:1.3em;
+      cursor:pointer;
+      margin:60px auto;
+      display:block;
+      border-radius:35px;
+      transition:background-color 0.3s ease;
+      box-shadow:0 3px 6px rgba(0,0,0,0.2);
     }
-
-    button:hover {
-      background-color: #004c99;
-    }
+    button:hover {background-color:#004c99;}
   </style>
 </head>
 <body>
@@ -100,73 +97,86 @@
 
   <input type="text" id="searchBox" placeholder="Search for a math topic or resource...">
 
-  <ul id="resourceList">
-    <!-- General Learning -->
-    <li><a href="https://www.khanacademy.org/math" target="_blank">Khan Academy</a><p>Free lessons from arithmetic to calculus.</p></li>
-    <li><a href="https://www.purplemath.com/" target="_blank">PurpleMath</a><p>Step-by-step algebra explanations.</p></li>
-    <li><a href="https://mathworld.wolfram.com/" target="_blank">MathWorld (Wolfram)</a><p>Encyclopedia of math concepts.</p></li>
-    <li><a href="https://www.mathsisfun.com/" target="_blank">Math is Fun</a><p>Simple explanations and activities.</p></li>
-    <li><a href="https://www.ixl.com/math/" target="_blank">IXL Math</a><p>Adaptive practice across K–12 topics.</p></li>
-    <li><a href="https://brilliant.org/" target="_blank">Brilliant</a><p>Interactive problem-solving courses.</p></li>
-    <li><a href="https://www.ck12.org/student/" target="_blank">CK-12 Math</a><p>Free digital textbooks and practice.</p></li>
-    <li><a href="https://openstax.org/subjects/math" target="_blank">OpenStax Math</a><p>Free college-level math textbooks.</p></li>
-    <li><a href="https://www.edx.org/learn/math" target="_blank">edX Math</a><p>University-level math courses online.</p></li>
-    <li><a href="https://www.coursera.org/browse/math-and-logic" target="_blank">Coursera Math</a><p>Online math courses from universities.</p></li>
+  <!-- Learn & Practice -->
+  <div class="category">
+    <h2>Learn & Practice</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Khan Academy</h3><p>Free lessons from arithmetic to calculus.</p><a href="https://www.khanacademy.org/math" target="_blank">Visit</a></div>
+      <div class="card"><h3>PurpleMath</h3><p>Step-by-step algebra explanations.</p><a href="https://www.purplemath.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>MathWorld</h3><p>Encyclopedia of math concepts.</p><a href="https://mathworld.wolfram.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Math is Fun</h3><p>Simple explanations and activities.</p><a href="https://www.mathsisfun.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>IXL Math</h3><p>Adaptive practice across K–12 topics.</p><a href="https://www.ixl.com/math/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Brilliant</h3><p>Interactive problem-solving courses.</p><a href="https://brilliant.org/" target="_blank">Visit</a></div>
+    </div>
+  </div>
 
-    <!-- Practice & Tools -->
-    <li><a href="https://www.desmos.com/" target="_blank">Desmos</a><p>Interactive graphing calculator.</p></li>
-    <li><a href="https://www.geogebra.org/" target="_blank">GeoGebra</a><p>Dynamic geometry and algebra tools.</p></li>
-    <li><a href="https://www.symbolab.com/" target="_blank">Symbolab</a><p>Equation solver with steps.</p></li>
-    <li><a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a><p>Computational knowledge engine.</p></li>
-    <li><a href="https://www.mathway.com/" target="_blank">Mathway</a><p>Step-by-step math problem solver.</p></li>
-    <li><a href="https://photomath.com/" target="_blank">Photomath</a><p>Mobile app for solving math problems.</p></li>
-    <li><a href="https://mathsolver.microsoft.com/" target="_blank">Microsoft Math Solver</a><p>Free AI-powered math solver.</p></li>
-    <li><a href="https://socratic.org/" target="_blank">Socratic by Google</a><p>Homework help with explanations.</p></li>
-    <li><a href="https://www.mathpapa.com/" target="_blank">MathPapa</a><p>Algebra calculator and tutorials.</p></li>
-    <li><a href="https://www.integral-calculator.com/" target="_blank">Integral Calculator</a><p>Online integral solver.</p></li>
+  <!-- Tools & Solvers -->
+  <div class="category">
+    <h2>Tools & Solvers</h2>
+    <div class="card-grid">
+      <div class="card"><h3>CK-12 Math</h3><p>Free digital textbooks and practice.</p><a href="https://www.ck12.org/student/" target="_blank">Visit</a></div>
+      <div class="card"><h3>OpenStax</h3><p>Free college-level math textbooks.</p><a href="https://openstax.org/subjects/math" target="_blank">Visit</a></div>
+      <div class="card"><h3>edX Math</h3><p>University-level math courses online.</p><a href="https://www.edx.org/learn/math" target="_blank">Visit</a></div>
+      <div class="card"><h3>Coursera Math</h3><p>Online math courses from universities.</p><a href="https://www.coursera.org/browse/math-and-logic" target="_blank">Visit</a></div>
+      <div class="card"><h3>Desmos</h3><p>Interactive graphing calculator.</p><a href="https://www.desmos.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>GeoGebra</h3><p>Dynamic geometry and algebra tools.</p><a href="https://www.geogebra.org/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Symbolab</h3><p>Equation solver with steps.</p><a href="https://www.symbolab.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Wolfram Alpha</h3><p>Computational knowledge engine.</p><a href="https://www.wolframalpha.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Mathway</h3><p>Step-by-step math problem solver.</p><a href="https://www.mathway.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Photomath</h3><p>Mobile app for solving math problems.</p><a href="https://photomath.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Microsoft Math Solver</h3><p>Free AI-powered math solver.</p><a href="https://mathsolver.microsoft.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Socratic by Google</h3><p>Homework help with explanations.</p><a href="https://socratic.org/" target="_blank">Visit</a></div>
+      <div class="card"><h3>MathPapa</h3><p>Algebra calculator and tutorials.</p><a href="https://www.mathpapa.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Integral Calculator</h3><p>Online integral solver.</p><a href="https://www.integral-calculator.com/" target="_blank">Visit</a></div>
+    </div>
+  </div>
 
-    <!-- Advanced & College-Level -->
-    <li><a href="https://tutorial.math.lamar.edu/" target="_blank">Paul’s Online Math Notes</a><p>College-level notes and tutorials.</p></li>
-    <li><a href="https://ocw.mit.edu/courses/mathematics/" target="_blank">MIT OpenCourseWare Math</a><p>Free MIT math courses.</p></li>
-    <li><a href="https://online-learning.harvard.edu/subject/mathematics" target="_blank">Harvard Math Online</a><p>Harvard math courses.</p></li>
-    <li><a href="https://online.stanford.edu/courses?search=math" target="_blank">Stanford Online Math</a><p>Stanford math courses.</p></li>
-    <li><a href="https://www.coursera.org/learn/linear-algebra-machine-learning" target="_blank">Coursera Linear Algebra</a><p>Linear algebra course.</p></li>
-    <li><a href="https://www.youtube.com/user/patrickJMT" target="_blank">PatrickJMT</a><p>YouTube tutorials on college math.</p></li>
-    <li><a href="https://math.stackexchange.com/" target="_blank">Math StackExchange</a><p>Q&A community for math problems.</p></li>
-    <li><a href="https://artofproblemsolving.com/" target="_blank">Art of Problem Solving</a><p>Advanced math resources for contests.</p></li>
-    <li><a href="https://projecteuler.net/" target="_blank">Project Euler</a><p>Math-based programming challenges.</p></li>
-    <li><a href="https://brilliant.org/courses/calculus/" target="_blank">Brilliant Calculus</a><p>Interactive calculus course.</p></li>
+  <!-- Higher Ed -->
+  <div class="category">
+    <h2>Higher Ed & Advanced</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Paul’s Online Math Notes</h3><p>College-level notes and tutorials.</p><a href="https://tutorial.math.lamar.edu/" target="_blank">Visit</a></div>
+      <div class="card"><h3>MIT OpenCourseWare Math</h3><p>Free MIT math courses.</p><a href="https://ocw.mit.edu/courses/mathematics/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Harvard Math Online</h3><p>Harvard math courses.</p><a href="https://online-learning.harvard.edu/subject/mathematics" target="_blank">Visit</a></div>
+      <div class="card"><h3>Stanford Online Math</h3><p>Stanford math courses.</p><a href="https://online.stanford.edu/courses?search=math" target="_blank">Visit</a></div>
+      <div class="card"><h3>Coursera Linear Algebra</h3><p>Linear algebra course.</p><a href="https://www.coursera.org/learn/linear-algebra-machine-learning" target="_blank">Visit</a></div>
+      <div class="card"><h3>PatrickJMT</h3><p>YouTube tutorials on college math.</p><a href="https://www.youtube.com/user/patrickJMT" target="_blank">Visit</a></div>
+      <div class="card"><h3>Math StackExchange</h3><p>Q&A community for math problems.</p><a href="https://math.stackexchange.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Art of Problem Solving</h3><p>Advanced math resources for contests.</p><a href="https://artofproblemsolving.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Project Euler</h3><p>Math-based programming challenges.</p><a href="https://projecteuler.net/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Brilliant Calculus</h3><p>Interactive calculus course.</p><a href="https://brilliant.org/courses/calculus/" target="_blank">Visit</a></div>
+    </div>
+  </div>
 
-    <!-- Teacher & Student Resources -->
-    <li><a href="https://www.weareteachers.com/best-math-websites/" target="_blank">WeAreTeachers Math Hub</a><p>Curated math teaching sites.</p></li>
-    <li><a href="https://teachingexpertise.com/classroom-ideas/best-math-websites/" target="_blank">Teaching Expertise Math Resources</a><p>80+ math websites for teachers.</p></li>
-    <li><a href="https://mathteacherhub.com/" target="_blank">Math Teacher Hub</a><p>Tools and lesson ideas.</p></li>
-    <li><a href="https://nrich.maths.org/" target="_blank">NRICH Math</a><p>Enrichment math problems for students and teachers.</p></li>
-    <li><a href="https://www.pbslearningmedia.org/subjects/mathematics/" target="_blank">PBS Learning Media Math</a><p>Math videos and lessons for classrooms.</p></li>
-    <li><a href="https://www.mathgoodies.com/" target="_blank">Math Goodies</a><p>Interactive lessons and worksheets.</p></li>
-    <li><a href="https://www.aaamath.com/" target="_blank">AAA Math</a><p>Free online math lessons with practice problems.</p></li>
-    <li><a href="https://www.edhelper.com/math.htm" target="_blank">EdHelper Math</a><p>Printable math worksheets for teachers.</p></li>
-    <li><a href="https://www.math-aids.com/" target="_blank">Math-Aids</a><p>Customizable math worksheets for all levels.</p></li>
-    <li><a href="https://www.varsitytutors.com/math-resources" target="_blank">Varsity Tutors Math Resources</a><p>Free math practice and tutoring tools.</p></li>
-  </ul>
+  <!-- Teacher & Student Resources -->
+  <div class="category">
+    <h2>Teacher & Student Resources</h2>
+    <div class="card-grid">
+      <div class="card"><h3>WeAreTeachers Math Hub</h3><p>Curated math teaching sites.</p><a href="https://www.weareteachers.com/best-math-websites/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Teaching Expertise Math Resources</h3><p>80+ math websites for teachers.</p><a href="https://teachingexpertise.com/classroom-ideas/best-math-websites/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Math Teacher Hub</h3><p>Tools and lesson ideas.</p><a href="https://mathteacherhub.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>NRICH Math</h3><p>Enrichment math problems for students and teachers.</p><a href="https://nrich.maths.org/" target="_blank">Visit</a></div>
+      <div class="card"><h3>PBS Learning Media Math</h3><p>Math videos and lessons for classrooms.</p><a href="https://www.pbslearningmedia.org/subjects/mathematics/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Math Goodies</h3><p>Interactive lessons and worksheets.</p><a href="https://www.mathgoodies.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>AAA Math</h3><p>Free online math lessons with practice problems.</p><a href="https://www.aaamath.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>EdHelper Math</h3><p>Printable math worksheets for teachers.</p><a href="https://www.edhelper.com/math.htm" target="_blank">Visit</a></div>
+      <div class="card"><h3>Math-Aids</h3><p>Customizable math worksheets for all levels.</p><a href="https://www.math-aids.com/" target="_blank">Visit</a></div>
+      <div class="card"><h3>Varsity Tutors Math Resources</h3><p>Free math practice and tutoring tools.</p><a href="https://www.varsitytutors.com/math-resources" target="_blank">Visit</a></div>
+    </div>
+  </div>
 
   <button onclick="window.location.href='thirdpage.html'">Next</button>
 
   <script>
-    // Search filter function
+    // Search filter
     document.getElementById('searchBox').addEventListener('keyup', function() {
       let filter = this.value.toLowerCase();
-      let resources = document.querySelectorAll('#resourceList li');
-
-      resources.forEach(function(item) {
-        let text = item.textContent.toLowerCase();
-        if (text.includes(filter)) {
-          item.style.display = "";
-        } else {
-          item.style.display = "none";
-        }
+      let cards = document.querySelectorAll('.card');
+      cards.forEach(function(card) {
+        let text = card.textContent.toLowerCase();
+        card.style.display = text.includes(filter) ? "" : "none";
       });
     });
   </script>
 </body>
-  </html>
+</html>
